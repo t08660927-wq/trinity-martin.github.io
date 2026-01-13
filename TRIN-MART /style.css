@@ -282,6 +282,27 @@ nav a.active::before {
     gap: 10px
 }
 
+/* Scrollable nav-actions for small screens */
+.nav-actions {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 6px;
+}
+
+.nav-actions::-webkit-scrollbar {
+    height: 6px;
+}
+.nav-actions::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+}
+.nav-actions > * {
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -1425,6 +1446,69 @@ small {
         max-width: 100%;
         padding-left: 12px;
         padding-right: 12px;
+    }
+
+    /* Smooth slide-down mobile nav using max-height and opacity */
+    #mobileNav {
+        display: block; /* keep in flow but collapsed by default */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 320ms ease, opacity 220ms ease;
+        background: linear-gradient(180deg, rgba(0,0,0,0.95), rgba(0,0,0,0.98));
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    #mobileNav.open {
+        max-height: 520px; /* enough to show menu items */
+        opacity: 1;
+    }
+
+    #mobileNav a {
+        padding: 14px 12px;
+        border-radius: 8px;
+        display: block;
+        font-weight: 700;
+        color: var(--text);
+        transition: background 180ms ease, transform 180ms ease;
+    }
+
+    #mobileNav a:hover {
+        transform: translateX(6px);
+        background: rgba(255,255,255,0.02);
+    }
+
+    /* Menu item entrance animation (staggered) */
+    #mobileNav .container > a {
+        opacity: 0;
+        transform: translateX(-12px);
+        transition: transform 280ms cubic-bezier(.2,.9,.2,1), opacity 280ms ease;
+    }
+
+    #mobileNav.open .container > a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Stagger delays for the first several items */
+    #mobileNav.open .container > a:nth-child(1) { transition-delay: 40ms; }
+    #mobileNav.open .container > a:nth-child(2) { transition-delay: 80ms; }
+    #mobileNav.open .container > a:nth-child(3) { transition-delay: 120ms; }
+    #mobileNav.open .container > a:nth-child(4) { transition-delay: 160ms; }
+    #mobileNav.open .container > a:nth-child(5) { transition-delay: 200ms; }
+    #mobileNav.open .container > a:nth-child(6) { transition-delay: 240ms; }
+
+    /* Animate the action button row (Login / Cart / Get App) */
+    #mobileNav .container > div {
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: transform 320ms ease, opacity 320ms ease;
+        transition-delay: 260ms;
+    }
+
+    #mobileNav.open .container > div {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .hero h2 {
