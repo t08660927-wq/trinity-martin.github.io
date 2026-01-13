@@ -1,0 +1,51 @@
+{
+    "id": "com.trinmart.marketplace",
+    "name": "TRIN-MART Multi-Category Store",
+    "short_name": "TRIN-MART",
+    "description": "A premium marketplace for Home, Style, Electronics & More.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#0a0f1a",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "categories": [
+        "shopping",
+        "lifestyle"
+    ],
+    "icons": [
+        {
+            "src": "images/chat3.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/chat3.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Shop Latest",
+            "url": "./index.html#products",
+            "icons": [
+                {
+                    "src": "images/chat3.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "View Cart",
+            "url": "./index.html",
+            "icons": [
+                {
+                    "src": "images/chat3.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}

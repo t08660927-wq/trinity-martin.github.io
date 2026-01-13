@@ -1,0 +1,914 @@
+/***** DATA: PRODUCTS (Expanded) *****/
+(function () {
+    // expose PRODUCTS globally immediately as it is data
+    window.PRODUCTS = [
+        // FASHION: SHOES
+        {
+            id: 1,
+            key: 'sneakers',
+            category: 'fashion-shoes',
+            name: "Classic Men's Sneakers",
+            price: 25000,
+            img: "images/nike_sneakers.png",
+            desc: "Comfortable, stylish sneakers built for everyday wear.",
+            vendor: "Desires Collection",
+            rating: 4.5,
+            reviewCount: 127,
+            stock: 45,
+            reviews: [{ author: "John D.", rating: 5, text: "Perfect fit and very comfortable!" }, { author: "Sarah M.", rating: 4, text: "Great quality, runs a bit large." }]
+        },
+        {
+            id: 4,
+            key: 'heels',
+            category: 'fashion-shoes',
+            name: "Women's Luxury Heels",
+            price: 50000,
+            img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=60",
+            desc: "Elegant heels for evening occasions. Premium leather finish.",
+            vendor: "Desires Collection",
+            rating: 4.8,
+            reviewCount: 89,
+            stock: 12,
+            reviews: [{ author: "Emma L.", rating: 5, text: "Absolutely stunning! Worth every penny." }, { author: "Lisa K.", rating: 4, text: "Beautiful but takes time to break in." }]
+        },
+        {
+            id: 909,
+            key: 'slides',
+            category: 'fashion-shoes',
+            name: "Slides",
+            price: 8500,
+            img: "images/slides.jpeg",
+            desc: "Comfortable slides for casual everyday wear.",
+            vendor: "Desires Collection",
+            rating: 4.2,
+            reviewCount: 203,
+            stock: 156,
+            reviews: [{ author: "Mike R.", rating: 4, text: "Very comfortable for the price." }, { author: "Tom B.", rating: 4, text: "Good quality, fast shipping." }]
+        },
+        // NEW ADDITIONS
+        {
+            id: 301,
+            key: 'jordan1',
+            category: 'fashion-shoes',
+            name: "Air Jordan 1 High",
+            price: 85000,
+            img: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=900&q=80",
+            desc: "Iconic high-top sneakers. Premium leather construction.",
+            vendor: "Desires Collection",
+            stock: 15
+        },
+        {
+            id: 302,
+            key: 'yeezy',
+            category: 'fashion-shoes',
+            name: "Boost 350 V2",
+            price: 95000,
+            img: "https://images.unsplash.com/photo-1587563871167-3279a7151dab?auto=format&fit=crop&w=900&q=80",
+            desc: "Ultra-comfortable knit fabric with distinctive ribbed styling.",
+            vendor: "Desires Collection",
+            stock: 8
+        },
+        {
+            id: 303,
+            key: 'timbs',
+            category: 'fashion-shoes',
+            name: "Premium Timberland Boots",
+            price: 65000,
+            img: "https://www.pngmart.com/files/7/Timberland-Boot-PNG-Isolated-Transparent-Image.png",
+            desc: "Rugged waterproof wheat timberland boots for any terrain.",
+            vendor: "Desires Collection",
+            stock: 25
+        },
+        {
+            id: 304,
+            key: 'converse',
+            category: 'fashion-shoes',
+            name: "Converse All Star High",
+            price: 18000,
+            img: "https://images.unsplash.com/photo-1607522370275-f14bc3a5d288?auto=format&fit=crop&w=900&q=80",
+            desc: "Classic black canvas high-top sneakers.",
+            vendor: "Desires Collection",
+            stock: 50
+        },
+        {
+            id: 305,
+            key: 'vans',
+            category: 'fashion-shoes',
+            name: "Vans Old Skool",
+            price: 22000,
+            img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80",
+            desc: "Skate-inspired low tops with the iconic side stripe.",
+            vendor: "Desires Collection",
+            stock: 40
+        },
+
+        // FASHION: CLOTHES
+        {
+            id: 2,
+            key: 'shorts',
+            category: 'fashion-clothes',
+            name: "Black Nike Shorts",
+            price: 12000,
+            img: "images/nike_shorts.png",
+            desc: "Breathable fabric, perfect for sports or casual weekends.",
+            vendor: "Desires Collection",
+            rating: 4.6,
+            reviewCount: 312,
+            stock: 89,
+            reviews: [{ author: "Alex P.", rating: 5, text: "Perfect for workouts!" }, { author: "Chris W.", rating: 4, text: "Great shorts, very breathable." }]
+        },
+        {
+            id: 3,
+            key: 'jacket',
+            category: 'fashion-clothes',
+            name: "Men's Winter Jacket",
+            price: 60000,
+            img: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=80",
+            desc: "High-quality insulation. Water-resistant outer layer.",
+            vendor: "Desires Collection",
+            rating: 4.9,
+            reviewCount: 67,
+            stock: 8,
+            reviews: [{ author: "David S.", rating: 5, text: "Best winter jacket I've owned!" }, { author: "Mark T.", rating: 5, text: "Keeps me warm in extreme cold." }]
+        },
+
+        // HOME & INTERIORS
+        {
+            id: 5,
+            key: 'lamp',
+            category: 'home',
+            name: "Minimalist  Lamp",
+            price: 18500,
+            img: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80",
+            desc: "Warm light for a cozy atmosphere. Matte black finish.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 6,
+            key: 'plant',
+            category: 'home',
+            name: "Ceramic Plant Pot",
+            price: 8000,
+            img: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=60",
+            desc: "Hand-crafted ceramic pot. Plant not included.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 7,
+            key: 'chair',
+            category: 'home',
+            name: "Velvet Accent Chair",
+            price: 45000,
+            img: "images/velvet_chair.png",
+            desc: "A statement piece for your living room. Ultra-soft velvet.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 901,
+            key: 'rug',
+            category: 'home',
+            name: "Modern Geometric Rug",
+            price: 35000,
+            img: "images/modern_rug.png",
+            desc: "Soft textured wool rug with modern geometric patterns.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 902,
+            key: 'cushion',
+            category: 'home',
+            name: "Boho Throw Cushion",
+            price: 8500,
+            img: "images/boho_cushion.png",
+            desc: "Hand-woven decorative cushion for sofas or beds.",
+            vendor: "Desires Collection"
+        },
+
+        // LIFESTYLE
+        {
+            id: 8,
+            key: 'watch',
+            category: 'lifestyle',
+            name: "Analog Classic Watch",
+            price: 35000,
+            img: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=900&q=60",
+            desc: "Timeless design with a genuine leather strap.",
+            vendor: "Desires Collection"
+        },
+        // NEW SHOE ADDITIONS
+        {
+            id: 201,
+            key: 'runningshoes',
+            category: 'fashion-shoes',
+            name: "Phantom Run Flyknit",
+            price: 32000,
+            img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+            desc: "High-performance running shoes with breathable mesh and responsive cushioning.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 202,
+            key: 'loafers',
+            category: 'fashion-shoes',
+            name: "Classic Leather Loafers",
+            price: 40000,
+            img: "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=900&q=80",
+            desc: "Hand-stitched genuine leather loafers. Perfect for office and formal events.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 203,
+            key: 'hightops',
+            category: 'fashion-shoes',
+            name: "Urban High-Tops",
+            price: 28000,
+            img: "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80",
+            desc: "Street-style high-top sneakers with retro color blocking.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 204,
+            key: 'chelseaboots',
+            category: 'fashion-shoes',
+            name: "Suede Chelsea Boots",
+            price: 35000,
+            img: "https://images.unsplash.com/photo-1621086851211-1a84f3319d96?auto=format&fit=crop&w=900&q=80",
+            desc: "Versatile suede boots that pair well with jeans or trousers.",
+            vendor: "Desires Collection"
+        },
+
+        // NEW ARRIVALS (Local Images)
+        {
+            id: 101,
+            key: 'img1',
+            category: 'fashion-clothes',
+            name: "Statement Graphic Tee",
+            price: 15000,
+            img: "images/1.JPG",
+            desc: "Bold design on premium cotton. Streetwear essential.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 102,
+            key: 'img2',
+            category: 'fashion-shoes',
+            name: "Nike Air Force 1 (Black Variant/custom style)",
+            price: 22000,
+            img: "images/2.JPG",
+            desc: "Functional pockets with a tailored fit.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 103,
+            key: 'img3',
+            category: 'fashion-shoes',
+            name: "Monochrome Sneakers",
+            price: 45000,
+            img: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80",
+            desc: "Sleek low-tops for any outfit. Classic black and white design.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 104,
+            key: 'img4',
+            category: 'fashion-clothes',
+            name: " nike  Short  ",
+            price: 18000,
+            img: "images/Short Nike jpeg.jpeg",
+            desc: "Classic denim fit for a relaxed look. Perfect for casual wear.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 105,
+            key: 'img5',
+            category: 'fashion-shoes',
+            name: "feeted sneakers for men ",
+            price: 55000,
+            img: "images/5.JPG",
+            desc: "Heavyweight cotton hoodie in neutral tones.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 106,
+            key: 'img6',
+            category: 'lifestyle',
+            name: "Premium Sunglasses",
+            price: 12000,
+            img: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=80",
+            desc: "Classic aviator style with UV protection and polarized lenses.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 107,
+            key: 'img7',
+            category: 'lifestyle',
+            name: "smart pods  ",
+            price: 25000,
+            img: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=900&q=80",
+            desc: "Essential gadgets for the modern nomad. Wireless earbuds and more.",
+            vendor: "Desires Collection"
+        },
+        {
+            id: 108,
+            key: 'img8',
+            category: 'fashion-shoes',
+            name: "Formal Leather Shoes",
+            price: 38000,
+            img: "https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=80",
+            desc: "Handcrafted leather Oxford shoes for formal occasions.",
+            vendor: "Desires Collection"
+        }
+    ];
+
+    // *** DATA: SITE CONFIG (Default) ***
+    const DEFAULT_CONFIG = {
+        hero: {
+            title: "One-stop shop for Home, Style & More",
+            subtitle: "Explore our curated marketplace for the best in fashion and interiors.",
+            primaryCta: "Start Shopping",
+            primaryLink: "#products",
+            showSecondary: true
+        },
+        announcement: {
+            text: "FLASH SALE: 20% OFF Everything - Use Code: FLASH15",
+            visible: true
+        }
+    };
+
+    // *** STORAGE MANAGER ***
+    const Storage = {
+        getProducts: function () {
+            const stored = localStorage.getItem('dropShop_products');
+            if (stored) return JSON.parse(stored);
+            // If no stored data, save defaults and return them
+            localStorage.setItem('dropShop_products', JSON.stringify(window.PRODUCTS));
+            return window.PRODUCTS;
+        },
+        saveProducts: function (products) {
+            localStorage.setItem('dropShop_products', JSON.stringify(products));
+            window.PRODUCTS = products; // Update in-memory
+        },
+        getConfig: function () {
+            const stored = localStorage.getItem('dropShop_config');
+            if (stored) return JSON.parse(stored);
+            localStorage.setItem('dropShop_config', JSON.stringify(DEFAULT_CONFIG));
+            return DEFAULT_CONFIG;
+        },
+        saveConfig: function (config) {
+            localStorage.setItem('dropShop_config', JSON.stringify(config));
+        }
+    };
+
+    // Initialize Global State from Storage
+    window.PRODUCTS = Storage.getProducts();
+    window.CONFIG = Storage.getConfig();
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScript);
+    } else {
+        initScript();
+    }
+
+    function initScript() {
+        /***** DOM REFERENCES *****/
+        const productGrid = document.getElementById('productGrid');
+        const productCount = document.getElementById('productCount');
+        const filterContainer = document.getElementById('filterContainer');
+
+        // Cart & Modal refs
+        const cartPanel = document.getElementById('cartPanel');
+        const cartToggle = document.getElementById('cartToggle');
+        const cartList = document.getElementById('cartList');
+        const cartCount = document.getElementById('cartCount');
+        const cartSubtotalEl = document.getElementById('cartSubtotal');
+        const cartDeliveryEl = document.getElementById('cartDelivery');
+        const cartTotalEl = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const clearCartBtn = document.getElementById('clearCart');
+        const closeCartBtn = document.getElementById('closeCart');
+
+        // Modal refs
+        const productModalBackdrop = document.getElementById('productModalBackdrop');
+        const modalProductName = document.getElementById('modalProductName');
+        const modalProductImg = document.getElementById('modalProductImg');
+        const modalProductPrice = document.getElementById('modalProductPrice');
+        const modalProductDesc = document.getElementById('modalProductDesc');
+        const modalVendor = document.getElementById('modalVendor'); // new
+        const modalQty = document.getElementById('modalQty');
+        const modalQtyPlus = document.getElementById('modalQtyPlus');
+        const modalQtyMinus = document.getElementById('modalQtyMinus');
+        const modalAddBtn = document.getElementById('modalAddBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const closeProductModal = document.getElementById('closeProductModal');
+
+        // Auth refs
+        const authBackdrop = document.getElementById('authBackdrop');
+        const loginBtn = document.getElementById('loginBtn');
+        const mobileLogin = document.getElementById('mobileLogin');
+        const mobileCart = document.getElementById('mobileCart');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const closeAuth = document.getElementById('closeAuth');
+
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        /***** THEME TOGGLE *****/
+        function initTheme() {
+            const savedTheme = localStorage.getItem('dropShop_theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                if (themeIcon) themeIcon.textContent = '☀️';
+            }
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isLight = document.body.classList.toggle('light-theme');
+                const theme = isLight ? 'light' : 'dark';
+                localStorage.setItem('dropShop_theme', theme);
+                if (themeIcon) themeIcon.textContent = isLight ? '☀️' : '🌙';
+            });
+        }
+        initTheme();
+
+        /***** CONFIG *****/
+        const cartDelivery = 2000;
+        let cart = []; // {productId, qty}
+        // Expose cart
+        window.CART = cart;
+
+        let currentModalProduct = null;
+        let modalQuantity = 1;
+        let currentCategoryFilter = 'all';
+
+        /***** FILTERING *****/
+        function initFilters() {
+            if (!filterContainer) return;
+            const filters = [
+                { id: 'all', label: 'All Items' },
+                { id: 'home', label: 'Home & Interiors' },
+                { id: 'fashion-clothes', label: 'Clothes' },
+                { id: 'fashion-shoes', label: 'Shoes' },
+                { id: 'lifestyle', label: 'Lifestyle' }
+            ];
+
+            filterContainer.innerHTML = '';
+            filters.forEach(f => {
+                const btn = document.createElement('button');
+                btn.className = `filter-pill ${f.id === 'all' ? 'active' : ''}`;
+                btn.textContent = f.label;
+                btn.onclick = () => setFilter(f.id, btn);
+                filterContainer.appendChild(btn);
+            });
+        }
+
+        function setFilter(category, btnElement) {
+            currentCategoryFilter = category;
+            // update UI
+            document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('active'));
+            btnElement.classList.add('active');
+            renderProducts();
+        }
+
+        /***** RENDER PRODUCTS *****/
+        window.formatNGN = function (value) {
+            return '₦' + Number(value).toLocaleString();
+        };
+
+        window.renderProducts = function () {
+            if (!productGrid) return;
+            productGrid.innerHTML = '';
+
+            // Toggle Hero Visibility
+            // Hero should only show on "Home" (All Items selected AND no search query)
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                const isHome = currentCategoryFilter === 'all' && (!window.searchQuery || window.searchQuery === '');
+                // Use default flex display if home, else hide
+                heroSection.style.display = isHome ? 'flex' : 'none';
+            }
+
+            // Apply all filters
+            let filtered = PRODUCTS;
+
+            // Category filter
+            if (currentCategoryFilter !== 'all') {
+                filtered = filtered.filter(p => p.category === currentCategoryFilter);
+            }
+
+            // Search filter (global from enhancements.js)
+            if (typeof window.searchQuery !== 'undefined' && window.searchQuery) {
+                filtered = filtered.filter(p =>
+                    p.name.toLowerCase().includes(window.searchQuery) ||
+                    p.desc.toLowerCase().includes(window.searchQuery)
+                );
+            }
+
+            // Price range filter (global from enhancements.js)
+            if (typeof window.priceMin !== 'undefined' && typeof window.priceMax !== 'undefined') {
+                filtered = filtered.filter(p => p.price >= window.priceMin && p.price <= window.priceMax);
+            }
+
+            // Sorting (global from enhancements.js)
+            if (typeof window.currentSort !== 'undefined') {
+                switch (window.currentSort) {
+                    case 'price-low':
+                        filtered.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-high':
+                        filtered.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'name':
+                        filtered.sort((a, b) => a.name.localeCompare(b.name));
+                        break;
+                }
+            }
+
+            filtered.forEach(p => {
+                // Check global wishlist
+                const isWishlisted = typeof window.wishlist !== 'undefined' && window.wishlist.includes(p.id);
+                const rating = p.rating || 4.0;
+                const reviewCount = p.reviewCount || 0;
+                const stock = p.stock !== undefined ? p.stock : 50;
+
+                const el = document.createElement('article');
+                el.className = 'card fade-in';
+                el.style.position = 'relative';
+                el.innerHTML = `
+              <!-- Wishlist Heart -->
+              <button class="wishlist-heart ${isWishlisted ? 'active' : ''}" onclick="event.stopPropagation(); typeof toggleWishlist !== 'undefined' && toggleWishlist(${p.id})">
+                <svg viewBox="0 0 24 24" fill="${isWishlisted ? 'white' : 'none'}">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="${isWishlisted ? 'white' : '#fff'}" stroke-width="1.6"/>
+                </svg>
+              </button>
+              
+              <img src="${p.img}" alt="${p.name}">
+              <div>
+                <div class="vendor-tag">Sold by ${p.vendor}</div>
+                <h3>${p.name}</h3>
+                ${typeof window.renderStars !== 'undefined' ? `<div style="display:flex;gap:6px;align-items:center;margin:4px 0;">
+                  ${window.renderStars(rating)}
+                  <span class="small muted">(${reviewCount})</span>
+                </div>` : ''}
+              </div>
+              <div class="flex space-between" style="align-items:center">
+                <div>
+                  <div class="price">${formatNGN(p.price)}</div>
+                  ${typeof window.getStockBadge !== 'undefined' ? window.getStockBadge(stock) : '<div class="small muted">In Stock</div>'}
+                </div>
+                <div class="actions">
+                  <button class="btn" data-action="view" data-id="${p.id}" style="background:var(--nav)">View</button>
+                  <button class="btn" data-action="add" data-id="${p.id}" style="width:40px;padding:0;justify-content:center" ${stock === 0 ? 'disabled' : ''}>+</button>
+                </div>
+              </div>
+            `;
+                productGrid.appendChild(el);
+            });
+            if (productCount) productCount.textContent = filtered.length;
+        };
+
+        // Event Delegation for Product Grid
+        if (productGrid) {
+            productGrid.addEventListener('click', (e) => {
+                const target = e.target;
+                const btn = target.closest('button[data-action]');
+                if (!btn) return;
+
+                const action = btn.dataset.action;
+                const id = Number(btn.dataset.id);
+
+                if (action === 'view') {
+                    showProductModal(id);
+                } else if (action === 'add') {
+                    addToCart(id, 1);
+                }
+            });
+        }
+
+        /***** CART LOGIC *****/
+        function findCartItemIndex(productId) {
+            return cart.findIndex(ci => ci.productId === productId);
+        }
+
+        window.addToCart = function (productId, qty = 1) {
+            const idx = findCartItemIndex(productId);
+            if (idx >= 0) {
+                cart[idx].qty += qty;
+            } else {
+                cart.push({ productId, qty });
+            }
+            // Update global cart if referenced elsewhere? 
+            // Better: update window.CART reference if it was a copy, but here it is reference.
+            updateCartUI();
+            openCartPanel();
+        };
+
+        function removeFromCart(productId) {
+            cart = cart.filter(ci => ci.productId !== productId);
+            window.CART = cart; // sync global
+            updateCartUI();
+        }
+
+        function setQty(productId, qty) {
+            const idx = findCartItemIndex(productId);
+            if (idx >= 0) {
+                cart[idx].qty = Math.max(1, qty);
+                updateCartUI();
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+            window.CART = cart; // sync global
+            updateCartUI();
+        }
+
+        function calculateTotals() {
+            let subtotal = 0;
+            cart.forEach(ci => {
+                const prod = PRODUCTS.find(p => p.id === ci.productId);
+                if (prod) subtotal += prod.price * ci.qty;
+            });
+            const delivery = cart.length ? cartDelivery : 0;
+            const total = subtotal + delivery;
+            return { subtotal, delivery, total };
+        }
+
+        window.updateCartUI = function () {
+            if (!cartList) return;
+            cartList.innerHTML = '';
+            const { subtotal, delivery, total } = calculateTotals();
+
+            if (cart.length === 0) {
+                cartList.innerHTML = '<div style="padding:36px;text-align:center;color:var(--muted)">Your cart is empty</div>';
+            } else {
+                cart.forEach(ci => {
+                    const p = PRODUCTS.find(x => x.id === ci.productId);
+                    if (!p) return;
+                    const itemEl = document.createElement('div');
+                    itemEl.className = 'cart-item';
+                    itemEl.innerHTML = `
+                <img src="${p.img}" alt="${p.name}">
+                <div class="meta">
+                  <div style="font-weight:700">${p.name}</div>
+                  <div class="small muted">${formatNGN(p.price)}</div>
+                  <div style="height:6px"></div>
+                  <div class="qty-controls">
+                    <button data-action="decrease" data-id="${p.id}">−</button>
+                    <div style="min-width:26px;text-align:center">${ci.qty}</div>
+                    <button data-action="increase" data-id="${p.id}">+</button>
+                  </div>
+                </div>
+                <button data-action="remove" data-id="${p.id}" style="color:#d33;background:none;border:0;cursor:pointer;font-size:18px">×</button>
+              `;
+                    cartList.appendChild(itemEl);
+
+                    itemEl.querySelectorAll('button[data-action]').forEach(btn => {
+                        btn.addEventListener('click', e => {
+                            const action = btn.dataset.action;
+                            const id = Number(btn.dataset.id);
+                            if (action === 'increase') setQty(id, (cart.find(ci => ci.productId === id).qty + 1));
+                            if (action === 'decrease') setQty(id, (cart.find(ci => ci.productId === id).qty - 1));
+                            if (action === 'remove') removeFromCart(id);
+                        });
+                    });
+                });
+            }
+
+            if (cartCount) cartCount.textContent = cart.reduce((s, ci) => s + ci.qty, 0);
+            if (cartSubtotalEl) cartSubtotalEl.textContent = formatNGN(subtotal);
+            if (cartDeliveryEl) cartDeliveryEl.textContent = formatNGN(delivery);
+            if (cartTotalEl) cartTotalEl.textContent = formatNGN(total);
+        };
+
+        /***** UI CONTROLS *****/
+        window.openCartPanel = function () {
+            if (cartPanel) {
+                cartPanel.classList.add('open');
+                cartPanel.setAttribute('aria-hidden', 'false');
+            }
+            if (cartToggle) cartToggle.setAttribute('aria-expanded', 'true');
+        };
+        window.closeCartPanel = function () {
+            if (cartPanel) {
+                cartPanel.classList.remove('open');
+                cartPanel.setAttribute('aria-hidden', 'true');
+            }
+            if (cartToggle) cartToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        if (cartToggle) cartToggle.addEventListener('click', () => {
+            if (cartPanel.classList.contains('open')) closeCartPanel();
+            else openCartPanel();
+        });
+        if (closeCartBtn) closeCartBtn.addEventListener('click', closeCartPanel);
+        if (clearCartBtn) clearCartBtn.addEventListener('click', () => {
+            if (confirm('Clear all items from the cart?')) clearCart();
+        });
+
+        if (checkoutBtn) checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) { alert('Your cart is empty'); return; }
+            const totals = calculateTotals();
+            alert(`Checkout (demo)\nItems: ${cart.length}\nTotal: ${formatNGN(totals.total)}\n\nThis would connect to a payment gateway.`);
+        });
+
+        /***** MODAL *****/
+        window.showProductModal = function (productId) {
+            // Use loose equality to support both string and number IDs
+            const p = PRODUCTS.find(x => x.id == productId);
+            if (!p) return;
+            currentModalProduct = p;
+            if (modalProductName) modalProductName.textContent = p.name;
+            if (modalProductImg) {
+                modalProductImg.src = p.img;
+                modalProductImg.alt = p.name;
+            }
+            if (modalProductPrice) modalProductPrice.textContent = formatNGN(p.price);
+            if (modalProductDesc) modalProductDesc.textContent = p.desc;
+
+            if (modalVendor) modalVendor.textContent = `Sold by: ${p.vendor}`;
+
+            modalQuantity = 1;
+            if (modalQty) modalQty.textContent = modalQuantity;
+            if (productModalBackdrop) {
+                productModalBackdrop.style.display = 'grid';
+                productModalBackdrop.setAttribute('aria-hidden', 'false');
+            }
+
+            renderModalReviews();
+        };
+
+        window.renderModalReviews = function () {
+            const list = document.getElementById('modalReviewList');
+            const summary = document.getElementById('modalReviewSummary');
+            if (!list || !currentModalProduct) return;
+
+            const reviews = currentModalProduct.reviews || [];
+            if (reviews.length === 0) {
+                list.innerHTML = '<div class="small muted" style="padding:12px;text-align:center;">No reviews yet. Be the first to review!</div>';
+                if (summary) summary.textContent = '0 reviews';
+            } else {
+                if (summary) summary.textContent = `${reviews.length} reviews`;
+                list.innerHTML = reviews.map(r => {
+                    const stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+                    return `
+                    <div style="margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid var(--border);">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+                            <strong style="font-size:13px;">${r.author}</strong>
+                            <span style="color:#fbbf24; font-size:12px;">${stars}</span>
+                        </div>
+                        <p style="margin:0; font-size:12px; line-height:1.4;">${r.text}</p>
+                    </div>
+                `}).join('');
+            }
+        };
+
+        const reviewForm = document.getElementById('reviewForm');
+        if (reviewForm) {
+            reviewForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (!currentModalProduct) return;
+
+                const rating = parseInt(document.getElementById('reviewRating').value);
+                const author = document.getElementById('reviewAuthor').value;
+                const text = document.getElementById('reviewText').value;
+
+                const newReview = { author, rating, text };
+                if (!currentModalProduct.reviews) currentModalProduct.reviews = [];
+                currentModalProduct.reviews.unshift(newReview);
+
+                // Save to storage
+                Storage.saveProducts(PRODUCTS);
+
+                // Update UI
+                renderModalReviews();
+                reviewForm.reset();
+                if (window.showToast) window.showToast('Review posted successfully!', 'success');
+            });
+        }
+        window.hideProductModal = function () {
+            if (productModalBackdrop) {
+                productModalBackdrop.style.display = 'none';
+                productModalBackdrop.setAttribute('aria-hidden', 'true');
+            }
+            currentModalProduct = null;
+        };
+        if (modalQtyPlus) modalQtyPlus.addEventListener('click', () => { modalQuantity++; modalQty.textContent = modalQuantity; });
+        if (modalQtyMinus) modalQtyMinus.addEventListener('click', () => { modalQuantity = Math.max(1, modalQuantity - 1); modalQty.textContent = modalQuantity; });
+
+        if (modalAddBtn) modalAddBtn.addEventListener('click', () => {
+            if (!currentModalProduct) return;
+            addToCart(currentModalProduct.id, modalQuantity);
+            hideProductModal();
+        });
+        if (modalCloseBtn) modalCloseBtn.addEventListener('click', hideProductModal);
+        if (closeProductModal) closeProductModal.addEventListener('click', hideProductModal);
+        if (productModalBackdrop) productModalBackdrop.addEventListener('click', (e) => {
+            if (e.target === productModalBackdrop) hideProductModal();
+        });
+
+        /***** AUTH *****/
+        function openAuth(showRegisterForm = false) {
+            if (authBackdrop) {
+                authBackdrop.style.display = 'grid';
+                authBackdrop.setAttribute('aria-hidden', 'false');
+            }
+            if (document.getElementById('authTitle')) document.getElementById('authTitle').textContent = showRegisterForm ? 'Create account' : 'Welcome — Login';
+            if (loginForm) loginForm.style.display = showRegisterForm ? 'none' : 'flex';
+            if (registerForm) registerForm.style.display = showRegisterForm ? 'flex' : 'none';
+        }
+        window.closeAuthModal = function () {
+            if (authBackdrop) {
+                authBackdrop.style.display = 'none';
+                authBackdrop.setAttribute('aria-hidden', 'true');
+            }
+        };
+        if (loginBtn) loginBtn.addEventListener('click', () => openAuth(false));
+        if (mobileLogin) mobileLogin.addEventListener('click', () => openAuth(false));
+        if (mobileCart) mobileCart.addEventListener('click', () => openCartPanel());
+        if (showRegister) showRegister.addEventListener('click', () => openAuth(true));
+        if (showLogin) showLogin.addEventListener('click', () => openAuth(false));
+        if (closeAuth) closeAuth.addEventListener('click', closeAuthModal);
+        if (authBackdrop) authBackdrop.addEventListener('click', (e) => { if (e.target === authBackdrop) closeAuthModal(); });
+
+        if (loginForm) loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            closeAuthModal();
+            alert(`Account created!`);
+        });
+    } // End setupEventListeners implementation
+
+    function checkAuthState() {
+        const user = localStorage.getItem('dropShop_user');
+    }
+
+    // *** HELPER FUNCTIONS (Hoisted) ***
+
+    function updateCartIcon() {
+        const cartCount = document.getElementById('cartCount');
+        // Calculate total qty
+        // For simplicity, just count items
+        // In real app, sum(item.qty)
+        // Storage.getCart() ??
+        // We aren't fully using Storage for cart yet in this refactor, 
+        // but let's assume valid state from existing cart logic if present.
+        // If not, we'll leave it simple.
+    }
+
+    // Helper to close auth modal
+    function closeAuthModal() {
+        const authBackdrop = document.getElementById('authBackdrop');
+        if (authBackdrop) {
+            authBackdrop.style.display = 'none';
+            authBackdrop.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    // Seller Modal Logic (Exposed globally or handled via internal listeners)
+    // We already attached listeners in setupEventListeners under "Modal Closers", 
+    // but we need the specific Open button for Sellers.
+
+    const sellerBackdrop = document.getElementById('sellerBackdrop');
+    const sellersBtn = document.getElementById('sellersBtn');
+    if (sellersBtn && sellerBackdrop) {
+        sellersBtn.addEventListener('click', () => {
+            sellerBackdrop.style.display = 'block'; // or grid
+            sellerBackdrop.setAttribute('aria-hidden', 'false');
+        });
+    }
+
+    const sellerForm = document.getElementById('sellerForm');
+    if (sellerForm) {
+        sellerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (sellerBackdrop) {
+                sellerBackdrop.style.display = 'none';
+                sellerBackdrop.setAttribute('aria-hidden', 'true');
+            }
+            alert('Thank you! We will contact you shortly.');
+            sellerForm.reset();
+        });
+    }
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-backdrop, .cart-panel').forEach(el => {
+                if (el.classList.contains('cart-panel')) {
+                    el.classList.remove('open');
+                    el.setAttribute('aria-hidden', 'true');
+                } else {
+                    el.style.display = 'none';
+                    el.setAttribute('aria-hidden', 'true');
+                }
+            });
+        }
+    });
+
+})();

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clear TRIN-MART Data</title>
+</head>
+
+<body>
+    <h1>Clearing TRIN-MART LocalStorage...</h1>
+    <p id="status">Processing...</p>
+    <script>
+        // Clear all TRIN-MART related data
+        localStorage.removeItem('dropShop_products');
+        localStorage.removeItem('dropShop_config');
+        localStorage.removeItem('dropShop_cart');
+        localStorage.removeItem('dropShop_user');
+        localStorage.removeItem('wishlist');
+        localStorage.removeItem('recentlyViewed');
+        localStorage.removeItem('newsletter');
+
+        document.getElementById('status').innerHTML = `
+            <p style="color: green; font-weight: bold;">✅ Successfully cleared all TRIN-MART data!</p>
+            <p>The following items were removed:</p>
+            <ul>
+                <li>Products cache</li>
+                <li>Site configuration</li>
+                <li>Shopping cart</li>
+                <li>User data</li>
+                <li>Wishlist</li>
+                <li>Recently viewed</li>
+                <li>Newsletter subscriptions</li>
+            </ul>
+            <p><strong>Next step:</strong> Close this page and refresh your TRIN-MART website to see the cleaned product list!</p>
+        `;
+    </script>
+</body>
+
+</html>
